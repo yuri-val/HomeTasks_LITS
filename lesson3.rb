@@ -21,6 +21,9 @@
 
 def bin_to_dec bin_num
   bin_str = bin_num.to_s
+  if bin_str.empty? then
+    return "0"
+  end
   dec_val = 0
   n = 0
   until bin_str == nil do
@@ -34,15 +37,18 @@ end
 
 def dec_to_bin dec_num
   dec_val = dec_num.to_i
+  if dec_val == 0 then
+    return 0
+  end
   bin_num = ""
   until dec_val == 1 do
     modulo = dec_val % 2
     dec_val = (dec_val / 2).to_i
     bin_num = modulo.to_s + bin_num
   end
-  if dec_num.to_i > 2 then
-	bin_num = "1" + bin_num 
-  end
+  
+  bin_num = "1" + bin_num 
+  
   return bin_num 
 end
 
