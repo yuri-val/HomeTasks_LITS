@@ -2,7 +2,7 @@
 
 def bin_to_dec bin_num
   bin_str = bin_num.to_s
-  if bin_str.empty? then
+  if bin_str == "0" then
     return "0"
   end
   dec_val = 0
