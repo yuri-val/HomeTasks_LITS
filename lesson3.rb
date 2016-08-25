@@ -27,21 +27,18 @@ def dec_to_bin dec_num
     dec_val = (dec_val / 2).to_i
     bin_num = modulo.to_s + bin_num
   end
-  
-  bin_num = "1" + bin_num 
-  
-  return bin_num 
+
+  bin_num = "1" + bin_num
+
+  return bin_num
 end
 
 
 dec_num = ARGV[0]
 bin_num = ARGV[1]
 
-puts "Arguments are: #{ARGV}"
-
 b_dec_num = bin_to_dec bin_num
 d_bin_num = dec_to_bin dec_num
 
-puts d_bin_num, b_dec_num
-
-
+puts "Decimal digit #{dec_num} -> #{d_bin_num}"
+puts "Binary digit #{bin_num} -> #{b_dec_num}"
