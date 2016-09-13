@@ -16,30 +16,6 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `errors`
---
-
-DROP TABLE IF EXISTS `errors`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `errors` (
-  `id` int(11) NOT NULL,
-  `figure_id` int(11) NOT NULL,
-  `formula_id` int(11) NOT NULL,
-  `parameter_set_id` int(11) NOT NULL,
-  `err_code` int(11) NOT NULL,
-  `err_msg` text NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `errors_fk0` (`figure_id`),
-  KEY `errors_fk1` (`formula_id`),
-  KEY `errors_fk2` (`parameter_set_id`),
-  CONSTRAINT `errors_fk2` FOREIGN KEY (`parameter_set_id`) REFERENCES `parameter_sets` (`id`),
-  CONSTRAINT `errors_fk0` FOREIGN KEY (`figure_id`) REFERENCES `figures` (`id`),
-  CONSTRAINT `errors_fk1` FOREIGN KEY (`formula_id`) REFERENCES `formulas` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Table structure for table `figures`
 --
 
@@ -47,7 +23,7 @@ DROP TABLE IF EXISTS `figures`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `figures` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` char(100) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -61,10 +37,13 @@ DROP TABLE IF EXISTS `formulas`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `formulas` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `figure_id` int(11) NOT NULL,
   `name` char(100) NOT NULL,
   `formula` text NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `squares_fk0` (`figure_id`),
+  CONSTRAINT `squares_fk0` FOREIGN KEY (`figure_id`) REFERENCES `figures` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -76,7 +55,7 @@ DROP TABLE IF EXISTS `parameter_sets`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `parameter_sets` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `p1` float NOT NULL,
   `p2` float DEFAULT NULL,
   `p3` float DEFAULT NULL,
@@ -94,7 +73,7 @@ DROP TABLE IF EXISTS `squares`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `squares` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `figure_id` int(11) NOT NULL,
   `formula_id` int(11) NOT NULL,
   `parameter_set_id` int(11) NOT NULL,
@@ -107,6 +86,32 @@ CREATE TABLE `squares` (
   CONSTRAINT `squares_fk0` FOREIGN KEY (`figure_id`) REFERENCES `figures` (`id`),
   CONSTRAINT `squares_fk2` FOREIGN KEY (`parameter_set_id`) REFERENCES `parameter_sets` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Table structure for table `errors`
+--
+
+DROP TABLE IF EXISTS `errors`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `errors` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `figure_id` int(11) NOT NULL,
+  `formula_id` int(11) NOT NULL,
+  `parameter_set_id` int(11) NOT NULL,
+  `err_code` int(11) NOT NULL,
+  `err_msg` text NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `errors_fk0` (`figure_id`),
+  KEY `errors_fk1` (`formula_id`),
+  KEY `errors_fk2` (`parameter_set_id`),
+  CONSTRAINT `errors_fk2` FOREIGN KEY (`parameter_set_id`) REFERENCES `parameter_sets` (`id`),
+  CONSTRAINT `errors_fk0` FOREIGN KEY (`figure_id`) REFERENCES `figures` (`id`),
+  CONSTRAINT `errors_fk1` FOREIGN KEY (`formula_id`) REFERENCES `formulas` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
