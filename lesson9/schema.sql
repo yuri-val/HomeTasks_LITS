@@ -42,8 +42,8 @@ CREATE TABLE `formulas` (
   `name` char(100) NOT NULL,
   `formula` text NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `squares_fk0` (`figure_id`),
-  CONSTRAINT `squares_fk0` FOREIGN KEY (`figure_id`) REFERENCES `figures` (`id`)
+  KEY `figures_fk0` (`figure_id`),
+  CONSTRAINT `figures_fk0` FOREIGN KEY (`figure_id`) REFERENCES `figures` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
