@@ -56,12 +56,15 @@ DROP TABLE IF EXISTS `parameter_sets`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `parameter_sets` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `formula_id` int(11) NOT NULL,
   `p1` float NOT NULL,
   `p2` float DEFAULT NULL,
   `p3` float DEFAULT NULL,
   `p4` float DEFAULT NULL,
   `p5` float DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `formulas_fk0` (`formula_id`),
+  CONSTRAINT `formulas_fk0` FOREIGN KEY (`formula_id`) REFERENCES `formulas` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
