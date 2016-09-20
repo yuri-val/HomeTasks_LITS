@@ -3,6 +3,7 @@ INSERT INTO
 VALUES
   ('Circle'),
   ('Rectangle'),
+  ('Romb'),
   ('Triangle');
 
 INSERT INTO
@@ -10,6 +11,9 @@ INSERT INTO
 VALUES
   (1, 'CircleS', "PI * p1 * p1"),
   (2, 'RectangleS', "p1 * p2"),
+  (3, 'TriangleS', '0.5 * p1 * p2');
+  (3, 'TriangleS', '0.5 * p1 * p2 * sin(p3)');
+  (3, 'TriangleS', 'sqrt(((p1+p2+p3)/2)(((p1+p2+p3)/2)-p1)(((p1+p2+p3)/2)-p2)(((p1+p2+p3)/2)-p3))');
   (3, 'TriangleS', 'sqrt(((p1+p2+p3)/2)(((p1+p2+p3)/2)-p1)(((p1+p2+p3)/2)-p2)(((p1+p2+p3)/2)-p3))');
 
 INSERT INTO
