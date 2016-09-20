@@ -1,0 +1,7 @@
+{
+    "provider": "mysql",
+    "host": "localhost",
+    "username": "root",
+    "password": "root",
+    "path": "/home/yuri/Downloads"
+}
