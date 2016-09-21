@@ -1,6 +1,6 @@
 require 'json'
 require 'mysql2'
-require 'sqlite3'
+require 'sqlite_magic'
 require 'mimemagic'
 
 class Connector
@@ -95,7 +95,7 @@ class Connector
 							CONSTRAINT `filetypes_fk0` FOREIGN KEY (`filetype_id`) REFERENCES `filetypes` (`id`))")
             return client
         when 'sqlite'
-            client = SQLite3::Database.new 'files.db'
+            client = SqliteMagic::Connection.new 'files.db'
             client.execute("CREATE TABLE IF NOT EXISTS `filetypes` (
       							`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL ,
       							`name` char(150) NOT NULL);")
@@ -123,7 +123,6 @@ class Connector
     def select(fields = '*', table)
         query = "SELECT #{fields} FROM #{table}"
         result = execute_query query
-        p result
   end
 
     def insert(fields = '', table, values)
