@@ -100,9 +100,9 @@ class Connector
       							`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL ,
       							`name` char(150) NOT NULL);")
             client.execute("CREATE TABLE IF NOT EXISTS files(
-      							id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-      							filetype_id INT(11),
-      							name VARCHAR(150),
+      							`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+      							`filetype_id` INT(11),
+      							`name` VARCHAR(150),
       							FOREIGN KEY (`filetype_id`) REFERENCES `filetypes` (`id`))")
             return client
         else
