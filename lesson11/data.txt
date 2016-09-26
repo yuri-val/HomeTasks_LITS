@@ -1,0 +1,10 @@
+Circle: 1, 2
+Rectangle:
+Triangle: 2,3,3
+Rectangle: 2,2
+Triangle: 2,3,3
+Triangle: 1,3
+Triangle: 3
+Circle: 1, 2
+Circle: 1, 2
+Triangle: 2, 2, 1
