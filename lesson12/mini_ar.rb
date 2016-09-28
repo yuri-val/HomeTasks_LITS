@@ -48,22 +48,28 @@ class MiniActiveRecord
       p klass.new.fields
     end
   end
-
+  # получаем все строки
+  def self.all
+      result = @@db.query_builder.select(" * ").from(@@table_name).run.result
+      found = []
+      result.each do |attributes|
+        found << new(attributes)
+      end
+      found
+    end
   # получаем строку таблицы по идентификатору
   def self.get(id)
     result = @@db.query_builder.select(" * ").from(@@table_name).where(" id = #{id}").run.result
     attributes = result.first
     new(attributes) if attributes
   end
-
-  # получаем все строки
-  def self.all
-    result = @@db.query_builder.select(" * ").from(@@table_name).run.result
+  def self.get_by(key, value)
+    result = @@db.query_builder.select(" * ").from(@@table_name).where(" #{key} = #{value}").run.result
     found = []
     result.each do |attributes|
-    #while(attributes = result.fetch_hash) do
       found << new(attributes)
     end
     found
   end
+
 end
