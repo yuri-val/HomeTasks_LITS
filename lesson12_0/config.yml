@@ -1,0 +1,6 @@
+provider: mysql
+dbname: my_db
+host: localhost
+username: root
+password: root
+path: data.txt
