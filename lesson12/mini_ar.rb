@@ -44,9 +44,6 @@ class MiniActiveRecord
       #p klass.new.fields
 
     end
-    @generated_classes.each do |klass|
-      p klass.new.fields
-    end
   end
   # получаем все строки
   def self.all
