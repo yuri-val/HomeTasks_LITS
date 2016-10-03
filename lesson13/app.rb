@@ -11,6 +11,7 @@ MiniActiveRecord::all_tables.each do |table|
 end
 
 MiniActiveRecord::generated_classes.each do |class_name|
+  p "#{class_name}:"
   p Object.const_get("#{class_name}").new.fields
 end
 

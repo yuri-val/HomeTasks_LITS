@@ -99,7 +99,6 @@ class DataBase
         end
         def list_fields table
           #debug
-          p table
           f_s = case table
             when "figures";  ["id", "name"];
             when "formulas";  ["id", "figure_id", "name", "formula"]
