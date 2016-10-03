@@ -1,0 +1,121 @@
+tables:
+  - name: figures
+    fields:
+      - name: id
+        type: int(11)
+        nn: true
+        ai: true
+        pk: true
+      - name: name
+        type: char(100)
+        nn: true
+  - name: formulas
+    fields:
+      - name: id
+        type: int(11)
+        nn: true
+        ai: true
+        pk: true
+      - name: figure_id
+        type: int(11)
+        nn: true
+        fk:
+          name: figures_fk0
+          tabel: figures
+          field: id
+      - name: name
+        type: char(100)
+        nn: true
+      - name: formula
+        type: text
+        nn: true
+  - name: parameter_sets
+    fields:
+      - name: id
+        type: int(11)
+        nn: true
+        ai: true
+        pk: true
+      - name: formula_id
+        type: int(11)
+        nn: true
+        fk:
+          name: formulas_fk0
+          table: formulas
+          field: id
+      - name: p1
+        type: float
+        nn: true
+      - name: p2
+        type: float
+      - name: p3
+        type: float
+      - name: p4
+        type: float
+      - name: p5
+        type: float
+  - name: squares
+    fields:
+      - name: id
+        type: int(11)
+        nn: true
+        ai: true
+        pk: true
+      - name: figure_id
+        type: int(11)
+        nn: true
+        fk:
+          name: squares_fk0
+          tabel: figures
+          field: id
+      - name: formula_id
+        type: int(11)
+        nn: true
+        fk:
+          name: squares_fk1
+          table: formulas
+          field: id
+      - name: parameter_set_id
+        type: int(11)
+        nn: true
+        fk:
+          name: squares_fk2
+          table: parameter_sets
+          field: id
+      - name: square
+        type: float
+        nn: true
+  - name: errors
+    fields:
+      - name: id
+        type: int(11)
+        nn: true
+        ai: true
+        pk: true
+      - name: figure_id
+        type: int(11)
+        nn: true
+        fk:
+          name: errors_fk0
+          tabel: figures
+          field: id
+      - name: formula_id
+        type: int(11)
+        nn: true
+        fk:
+          name: errors_fk1
+          table: formulas
+          field: id
+      - name: parameter_set_id
+        type: int(11)
+        nn: true
+        fk:
+          name: errors_fk2
+          table: parameter_sets
+          field: id
+      - name: err_code
+        type: int(11)
+        nn: true
+      - name: err_msg
+        type: text
+        nn: true
