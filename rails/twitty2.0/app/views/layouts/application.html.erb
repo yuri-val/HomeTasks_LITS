@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Twitty20</title>
-    <%= csrf_meta_tags %>
+    <head>
+        <title>Twitty20</title>
+        <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
 
-  <body>
-    <%= yield %>
-  </body>
+    <body>
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand" href="#">
+                        Twitty
+                    </a>
+                    <ul class="nav">
+                        <li>
+                            <a href="/users">Users</a>
+                        </li>
+                        <li>
+                            <a href="/twits">Twits</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <%= yield %>
+    </body>
 </html>

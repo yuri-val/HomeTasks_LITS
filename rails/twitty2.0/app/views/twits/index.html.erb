@@ -2,7 +2,7 @@
 
 <h1>Twits</h1>
 
-<table>
+<table  class="table">
   <thead>
     <tr>
       <th></th>
@@ -18,9 +18,9 @@
         <td><%= image_tag twit.user.avatar.url(:micro) %></td>
         <td><%= link_to twit.user.nickname, twit.user %></td>
         <td><%= twit.content %></td>
-        <td><%= link_to 'Show', twit %></td>
-        <td><%= link_to 'Edit', edit_twit_path(twit) %></td>
-        <td><%= link_to 'Destroy', twit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', twit, class: "btn" %></td>
+        <td><%= link_to 'Edit', edit_twit_path(twit) , class: "btn" %></td>
+        <td><%= link_to 'Destroy', twit, {method: :delete, data: { confirm: 'Are you sure?' }, class: "btn"} %></td>
       </tr>
     <% end %>
   </tbody>
