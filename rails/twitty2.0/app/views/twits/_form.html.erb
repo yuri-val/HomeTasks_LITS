@@ -11,17 +11,20 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :content %>
-    <%= f.text_area :content %>
-  </div>
-
-  <div class="field">
-    <%= f.label :user_id %>
-    <%= f.collection_select(:user_id, User.all, :id, :nickname) %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
+  <div class="alert alert-success">
+      <table class="table  borderless" width="350px">
+          <tr>
+              <td width="45%">  <%= f.label :content, align:"right" %></td>
+              <td width="55%"><%= f.text_area :content %></td>
+          </tr>
+          <tr>
+              <td><%= f.label :user_id, align:"right" %></td>
+              <td><%= f.collection_select(:user_id, User.all, :id, :nickname) %></td>
+          </tr>
+          <tr>
+              <td></td>
+              <td><%= f.submit "Save Twit", class: "btn btn-success" %></td>
+          </tr>
+      </table>
   </div>
 <% end %>

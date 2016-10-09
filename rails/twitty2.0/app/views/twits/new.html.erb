@@ -1,5 +1,13 @@
-<h1>New Twit</h1>
+<div class="alert alert-info">
+    <h1 align="center">
+      New Twit
+    </h1>
+</div>
 
 <%= render 'form', twit: @twit %>
 
-<%= link_to 'Back', twits_path %>
+<ul class="pager">
+    <li class="previous">
+        <%= link_to '← Back', twits_path, class: "previous" %>
+    </li>
+</ul>

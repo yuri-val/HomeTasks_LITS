@@ -1,14 +1,37 @@
-<p id="notice"><%= notice %></p>
+<div id="notice" class="alert alert-info">
+    <p><%= notice %></p>
+</div>
 
-<p>
-  <strong>Content:</strong>
-  <%= @twit.content %>
-</p>
+<div class="alert alert-success">
+    <table class="table  borderless" width="350px">
+        <tr>
+            <td width="25%"></td>
+            <td width="15%"><%= image_tag @twit.user.avatar.url(:micro), {class: "img-circle", align:"right"} %></td>
+            <td width="35%">
+                <h2><%= link_to @twit.user.nickname, @twit.user %></h2>
+            </td>
+            <td width="25%"></td>
+        </tr>
+        <tr>
+            <td><%= image_tag "http://allpng.com/wp-content/uploads/2016/06/tweety-png-file.png",  {width: "200px", class: "mirrorY"} %></td>
+            <td>
+                <p align="right"><strong>Content:</strong></p>
+            </td>
+            <td>
+                <textarea disabled class = "form-control" rows = "3" align="left">
+                    <%= @twit.content %>
+                </textarea>
+            </td>
+            <td><%= image_tag "http://i.piccy.info/i9/c2cbf17cbf53d1062818c17cc880bd35/1476032129/168943/1077981/cartoon_mailbox_illustration_children_happy_colorful_christmas_31509399_1_.png", {width: "200px"} %></td>
+        </tr>
+    </table>
+</div>
 
-<p>
-  <strong>User:</strong>
-  <%= @twit.user_id %>
-</p>
-
-<%= link_to 'Edit', edit_twit_path(@twit) %> |
-<%= link_to 'Back', twits_path %>
+<ul class="pager">
+    <li class="previous">
+        <%= link_to '← Back', twits_path, class: "previous" %>
+    </li>
+    <li class="previous">
+        <%= link_to 'Edit', edit_twit_path(@twit) %>
+    </li>
+</ul>

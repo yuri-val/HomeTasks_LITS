@@ -1,31 +1,39 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Twits</h1>
+<div class="alert alert-info">
+    <h1 align="center">
+      <%= image_tag "http://3.bp.blogspot.com/-69cFNZVCYSE/VffOiQ4D5HI/AAAAAAAATDo/IAeJxw8d8lw/s1600/08d3fa586b3a.png", size: "150", class: "mirrorY" %>
+      Twits
+      <%= image_tag "http://3.bp.blogspot.com/-69cFNZVCYSE/VffOiQ4D5HI/AAAAAAAATDo/IAeJxw8d8lw/s1600/08d3fa586b3a.png", size: "150" %>
+    </h1>
+</div>
 
-<table  class="table">
-  <thead>
-    <tr>
-      <th></th>
-      <th>User</th>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="alert alert-success">
+    <table class="table table-striped table-condensed">
+        <thead>
+            <tr>
+                <th><%= link_to 'New Twit', new_twit_path, class: "btn  btn-warning"  %></th>
+                <th>User</th>
+                <th>Content</th>
+                <th colspan="3"></th>
+            </tr>
+        </thead>
 
-  <tbody>
-    <% @twits.each do |twit| %>
-      <tr>
-        <td><%= image_tag twit.user.avatar.url(:micro) %></td>
-        <td><%= link_to twit.user.nickname, twit.user %></td>
-        <td><%= twit.content %></td>
-        <td><%= link_to 'Show', twit, class: "btn" %></td>
-        <td><%= link_to 'Edit', edit_twit_path(twit) , class: "btn" %></td>
-        <td><%= link_to 'Destroy', twit, {method: :delete, data: { confirm: 'Are you sure?' }, class: "btn"} %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <tbody>
+            <% @twits.each do |twit| %>
+            <tr>
+                <td><%= image_tag twit.user.avatar.url(:micro), class: "img-circle"  %></td>
+                <td><%= link_to twit.user.nickname, twit.user %></td>
+                <td><%= twit.content %></td>
+                <td>
+                    <%= link_to 'Show', twit, class: "btn btn-primary" %>
+                    <%= link_to 'Edit', edit_twit_path(twit) ,class: "btn btn-success" %>
+                    <%= link_to 'Destroy', twit, {method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger"} %>
+                </td>
+            </tr>
+            <% end %>
+        </tbody>
+    </table>
+</div>
 
 <br>
-
-<%= link_to 'New Twit', new_twit_path %>
