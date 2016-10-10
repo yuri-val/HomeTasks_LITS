@@ -18,7 +18,7 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= image_tag user.avatar.url(:micro) %></td>
+        <td><%= image_tag user.avatar.url(:micro), class: "img-circle" %></td>
         <td><%= user.nickname %></td>
         <td><%= user.email %></td>
         <td>
