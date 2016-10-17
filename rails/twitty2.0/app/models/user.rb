@@ -10,4 +10,5 @@ class User < ApplicationRecord
                     default_url: "/images/:style/missing.png"
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
   has_many :twits, dependent: :destroy
+  has_many :comments
 end

@@ -4,6 +4,9 @@ class TwitsController < ApplicationController
   # GET /twits
   # GET /twits.json
   def index
+    par = params.to_unsafe_h
+    par.delete("controller")
+    par.delete("action")
     @twits = Twit.all
   end
 

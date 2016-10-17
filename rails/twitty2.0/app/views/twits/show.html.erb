@@ -28,6 +28,22 @@
         </tr>
     </table>
 </div>
+<div class="alert alert-success">
+  <h2>Add a comment:</h2>
+  <%= form_for([@twit, @twit.comments.build]) do |f| %>
+    <p>
+      <%= f.label :commenter %><br />
+      <%= f.collection_select(:user_id, User.all, :id, :nickname) %>
+    </p>
+    <p>
+      <%= f.label :body %><br />
+      <%= f.text_area :body %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+  <% end %>
+</div>
 
 <ul class="pager">
     <li class="previous">
