@@ -1,0 +1,10 @@
+<%= semantic_form_for @tag do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :name %>
+    <%= f.input :parent_id, :as => :select,      :collection => nested_set_options(Tag, @tag) {|i| "#{'-' * i.level} #{i.name}" } %>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :input %>
+  <% end %>
+<% end %>

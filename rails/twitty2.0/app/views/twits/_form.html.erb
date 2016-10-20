@@ -22,6 +22,10 @@
               <td><%= f.collection_select(:user_id, User.all, :id, :nickname) %></td>
           </tr>
           <tr>
+              <td><%= f.label "Tags", align:"right" %></td>
+              <td><%= f.text_field :tag_list %></td>
+          </tr>
+          <tr>
               <td></td>
               <td><%= f.submit "Save Twit", class: "btn btn-success" %></td>
           </tr>

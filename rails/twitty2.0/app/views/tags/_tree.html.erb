@@ -1,0 +1,8 @@
+<% content_tag :li, :id => dom_id(ntag) do %>
+  <span class="handle"><%= ntag.name %></span>
+  <% content_tag :ul do %>
+   <% for child in ntag.children do %>
+    <%= render :partial => "tree", locals: {ntag: child} %>
+   <% end %>
+  <% end unless ntag.leaf? %>
+ <% end %>

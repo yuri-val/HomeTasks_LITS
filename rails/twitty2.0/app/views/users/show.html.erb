@@ -20,10 +20,10 @@
     </table>
 
     <p align="center">
-      <strong>User's twits:</strong>
+      <strong><%= link_to 'User Twits:', [@user, :twits] %></strong>
       <table class="table table-striped table-condensed">
           <tbody>
-          <% @user.twits.each do |twit| %>
+          <% @user.twits.last(10).each do |twit| %>
             <tr>
               <td width="80%"><%= twit.content %></td>
               <td width="20%"><%= link_to 'Show', twit, class: "btn btn-primary"  %>

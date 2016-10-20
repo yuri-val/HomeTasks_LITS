@@ -1,12 +1,13 @@
 class TwitsController < ApplicationController
   before_action :set_twit, only: [:show, :edit, :update, :destroy]
 
+
+  def tag_cloud
+    @tags = Twit.tag_counts_on(:tags)
+  end
   # GET /twits
   # GET /twits.json
   def index
-    par = params.to_unsafe_h
-    par.delete("controller")
-    par.delete("action")
     @twits = Twit.all
   end
 
@@ -72,6 +73,6 @@ class TwitsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def twit_params
-      params.require(:twit).permit(:content, :user_id)
+      params.require(:twit).permit(:content, :user_id, :tag_list)
     end
 end

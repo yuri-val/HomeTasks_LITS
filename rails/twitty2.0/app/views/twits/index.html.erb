@@ -8,7 +8,15 @@
     </h1>
 </div>
 
+<div class="alert alert-info">
+  <h3>Tag cloud:</h3>
+  <% tag_cloud(Tag.all, %w(css1 css2 css3 css4)) do |tag, css_class| %>
+    <%= link_to tag.name + " (#{tag.children.count})", tag_path(tag.id), :class => css_class %>
+  <% end %>
+</div>
+
 <div class="alert alert-success">
+
     <table class="table table-striped table-condensed">
         <thead>
             <tr>

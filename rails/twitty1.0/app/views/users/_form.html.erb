@@ -1,4 +1,4 @@
-<%= form_for(user) do |f| %>
+<%= bootstrap_form_for(user) do |f| %>
   <% if user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -11,15 +11,19 @@
     </div>
   <% end %>
 
+  <div class="form-group has-feedback">
+  <label class="control-label" for="user_login">Login</label>
+  <input class="form-control" id="user_login" name="user[login]" type="text" />
+  <span class="glyphicon glyphicon-user form-control-feedback"></span>
+</div>
+
   <%= f.file_field :avatar %>
   <div class="field">
-    <%= f.label :nickname %>
     <%= f.text_field :nickname %>
   </div>
 
   <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
+    <%= f.email_field :email %>
   </div>
 
   <div class="actions">

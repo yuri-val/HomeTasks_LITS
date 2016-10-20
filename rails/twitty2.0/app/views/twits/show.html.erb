@@ -28,15 +28,42 @@
         </tr>
     </table>
 </div>
+
+<% if @twit.tags.count > 0 %>
+  <ul>
+    <% @twit.tags.each do |tag| %>
+      <li><%= link_to tag.name, tag_url(tag) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no tags on the system.</p>
+<% end %>
+
+<p align="center">
+  <strong><%= link_to 'Twit Comments:', [@twit, :comments] %></strong>
+  <table class="table table-striped table-condensed">
+      <tbody>
+      <% @twit.comments.last(10).each do |comment| %>
+        <tr>
+          <td width="20%"><%= comment.user.nickname %></td>
+          <td width="60%"><%= comment.body %></td>
+          <td width="20%"><%= link_to 'Show', comment, class: "btn btn-primary"  %>
+          <%= link_to 'Edit', edit_comment_path(comment), class: "btn btn-success"  %>
+          <%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</p>
+
 <div class="alert alert-success">
   <h2>Add a comment:</h2>
-  <%= form_for([@twit, @twit.comments.build]) do |f| %>
+  <%= semantic_form_for([@twit, @twit.comments.build]) do |f| %>
     <p>
-      <%= f.label :commenter %><br />
       <%= f.collection_select(:user_id, User.all, :id, :nickname) %>
     </p>
     <p>
-      <%= f.label :body %><br />
+      <%= f.label :body %><br>
       <%= f.text_area :body %>
     </p>
     <p>
@@ -44,7 +71,6 @@
     </p>
   <% end %>
 </div>
-
 <ul class="pager">
     <li class="previous">
         <%= link_to '← Back', twits_path, class: "previous" %>

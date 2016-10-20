@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  user: 
+  user: one
   body: MyText
   twit: one
 
 two:
-  user: 
+  user: two
   body: MyText
   twit: two
