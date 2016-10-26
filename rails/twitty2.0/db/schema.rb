@@ -63,14 +63,6 @@ ActiveRecord::Schema.define(version: 20161019152335) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "twits_tags", force: :cascade do |t|
-    t.integer  "twit_id"
-    t.integer  "tag_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["tag_id"], name: "index_twits_tags_on_tag_id"
-    t.index ["twit_id"], name: "index_twits_tags_on_twit_id"
-  end
 
   create_table "users", force: :cascade do |t|
     t.string   "nickname"

@@ -52,3 +52,5 @@ gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'formtastic', '~> 3.1'
 gem 'awesome_nested_set'
 gem 'acts-as-taggable-on', '~> 4.0'
+gem 'faker'
+gem 'db_fixtures_dump'
