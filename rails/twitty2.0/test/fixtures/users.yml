@@ -1,9 +1,97 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  nickname: MyString
-  email: MyString
-
-two:
-  nickname: MyString
-  email: MyString
+---
+User_1:
+  id: 34
+  nickname: uriel
+  email: uriel@wiza.biz
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2016-10-25 21:09:02.049577000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2016-10-25 21:09:02.049577000 Z
+    zone: *2
+    time: *3
+  avatar_file_name: uriel.jpg
+  avatar_content_type: image/png
+  avatar_file_size: 35447
+  avatar_updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &4 2016-10-25 21:09:01.421499000 Z
+    zone: *2
+    time: *4
+User_2:
+  id: 35
+  nickname: dejon
+  email: dejon@lowe.com
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &5 2016-10-25 21:09:06.513302000 Z
+    zone: *2
+    time: *5
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &6 2016-10-25 21:09:06.513302000 Z
+    zone: *2
+    time: *6
+  avatar_file_name: dejon.jpg
+  avatar_content_type: image/png
+  avatar_file_size: 28666
+  avatar_updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &7 2016-10-25 21:09:06.309363000 Z
+    zone: *2
+    time: *7
+User_3:
+  id: 36
+  nickname: cecil
+  email: cecil@murray.co
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &8 2016-10-25 21:09:11.192329000 Z
+    zone: *2
+    time: *8
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &9 2016-10-25 21:09:11.192329000 Z
+    zone: *2
+    time: *9
+  avatar_file_name: cecil.jpg
+  avatar_content_type: image/png
+  avatar_file_size: 43757
+  avatar_updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &10 2016-10-25 21:09:10.976394000 Z
+    zone: *2
+    time: *10
+User_4:
+  id: 37
+  nickname: dejon
+  email: dejon@gerlach.co
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &11 2016-10-25 21:09:15.628791000 Z
+    zone: *2
+    time: *11
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &12 2016-10-25 21:09:15.628791000 Z
+    zone: *2
+    time: *12
+  avatar_file_name: dejon.jpg
+  avatar_content_type: image/png
+  avatar_file_size: 28666
+  avatar_updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &13 2016-10-25 21:09:15.438226000 Z
+    zone: *2
+    time: *13
+User_5:
+  id: 38
+  nickname: jaylin
+  email: jaylin@kuhn.biz
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &14 2016-10-25 21:09:20.150793000 Z
+    zone: *2
+    time: *14
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &15 2016-10-25 21:09:20.150793000 Z
+    zone: *2
+    time: *15
+  avatar_file_name: jaylin.jpg
+  avatar_content_type: image/png
+  avatar_file_size: 28618
+  avatar_updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &16 2016-10-25 21:09:19.951934000 Z
+    zone: *2
+    time: *16

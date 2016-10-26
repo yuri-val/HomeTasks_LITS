@@ -1,9 +1,304 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  content: MyText
-  user_id: 1
-
-two:
-  content: MyText
-  user_id: 1
+---
+Twit_1:
+  id: 273
+  content: Vero quae et optio neque voluptatibus et vel et eos
+  user_id: 34
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2016-10-25 21:09:02.221113000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2016-10-25 21:09:02.221113000 Z
+    zone: *2
+    time: *3
+Twit_2:
+  id: 274
+  content: Et labore beatae velit harum a consequatur qui alias sit
+  user_id: 34
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &4 2016-10-25 21:09:02.815893000 Z
+    zone: *2
+    time: *4
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &5 2016-10-25 21:09:02.815893000 Z
+    zone: *2
+    time: *5
+Twit_3:
+  id: 275
+  content: Et pariatur nihil laboriosam exercitationem eum at quidem molestias et
+  user_id: 34
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &6 2016-10-25 21:09:03.373846000 Z
+    zone: *2
+    time: *6
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &7 2016-10-25 21:09:03.373846000 Z
+    zone: *2
+    time: *7
+Twit_4:
+  id: 276
+  content: Est voluptatem quidem molestiae distinctio quas minus quo molestias et
+  user_id: 34
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &8 2016-10-25 21:09:03.967524000 Z
+    zone: *2
+    time: *8
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &9 2016-10-25 21:09:03.967524000 Z
+    zone: *2
+    time: *9
+Twit_5:
+  id: 277
+  content: Ipsa sint eius ut a nihil magni enim quis fuga
+  user_id: 34
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &10 2016-10-25 21:09:04.613070000 Z
+    zone: *2
+    time: *10
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &11 2016-10-25 21:09:04.613070000 Z
+    zone: *2
+    time: *11
+Twit_6:
+  id: 278
+  content: Quas temporibus esse velit nam doloremque tenetur eveniet et voluptate
+  user_id: 35
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &12 2016-10-25 21:09:06.691817000 Z
+    zone: *2
+    time: *12
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &13 2016-10-25 21:09:06.691817000 Z
+    zone: *2
+    time: *13
+Twit_7:
+  id: 279
+  content: Beatae non laborum aut omnis ipsam consequuntur qui id enim
+  user_id: 35
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &14 2016-10-25 21:09:07.306544000 Z
+    zone: *2
+    time: *14
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &15 2016-10-25 21:09:07.306544000 Z
+    zone: *2
+    time: *15
+Twit_8:
+  id: 280
+  content: Et tenetur voluptatem alias dolorum eum tempora voluptatibus nam dolore
+  user_id: 35
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &16 2016-10-25 21:09:07.986689000 Z
+    zone: *2
+    time: *16
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &17 2016-10-25 21:09:07.986689000 Z
+    zone: *2
+    time: *17
+Twit_9:
+  id: 281
+  content: Possimus doloribus et cumque sunt aut ullam dolorem blanditiis impedit
+  user_id: 35
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &18 2016-10-25 21:09:08.587978000 Z
+    zone: *2
+    time: *18
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &19 2016-10-25 21:09:08.587978000 Z
+    zone: *2
+    time: *19
+Twit_10:
+  id: 282
+  content: Officia mollitia hic nam animi et possimus eum iure et
+  user_id: 35
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &20 2016-10-25 21:09:09.180133000 Z
+    zone: *2
+    time: *20
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &21 2016-10-25 21:09:09.180133000 Z
+    zone: *2
+    time: *21
+Twit_11:
+  id: 283
+  content: Dignissimos tempore similique mollitia dolorem velit doloremque iste suscipit
+    molestiae
+  user_id: 36
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &22 2016-10-25 21:09:11.425508000 Z
+    zone: *2
+    time: *22
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &23 2016-10-25 21:09:11.425508000 Z
+    zone: *2
+    time: *23
+Twit_12:
+  id: 284
+  content: Quisquam magni nostrum ut magnam animi id soluta architecto exercitationem
+  user_id: 36
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &24 2016-10-25 21:09:12.070388000 Z
+    zone: *2
+    time: *24
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &25 2016-10-25 21:09:12.070388000 Z
+    zone: *2
+    time: *25
+Twit_13:
+  id: 285
+  content: Non quam distinctio quo quia quis cum unde nostrum iure
+  user_id: 36
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &26 2016-10-25 21:09:12.696640000 Z
+    zone: *2
+    time: *26
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &27 2016-10-25 21:09:12.696640000 Z
+    zone: *2
+    time: *27
+Twit_14:
+  id: 286
+  content: Quia corrupti ut voluptas tempora aliquid et quisquam sed dignissimos
+  user_id: 36
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &28 2016-10-25 21:09:13.355411000 Z
+    zone: *2
+    time: *28
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &29 2016-10-25 21:09:13.355411000 Z
+    zone: *2
+    time: *29
+Twit_15:
+  id: 287
+  content: Labore debitis unde aut ducimus modi enim et earum similique
+  user_id: 36
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &30 2016-10-25 21:09:13.990671000 Z
+    zone: *2
+    time: *30
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &31 2016-10-25 21:09:13.990671000 Z
+    zone: *2
+    time: *31
+Twit_16:
+  id: 288
+  content: Reiciendis quos itaque nisi quaerat suscipit non et dolorum amet
+  user_id: 37
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &32 2016-10-25 21:09:15.791705000 Z
+    zone: *2
+    time: *32
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &33 2016-10-25 21:09:15.791705000 Z
+    zone: *2
+    time: *33
+Twit_17:
+  id: 289
+  content: Assumenda explicabo harum dolorum sunt laborum consequatur excepturi deserunt
+    consequatur
+  user_id: 37
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &34 2016-10-25 21:09:16.417631000 Z
+    zone: *2
+    time: *34
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &35 2016-10-25 21:09:16.417631000 Z
+    zone: *2
+    time: *35
+Twit_18:
+  id: 290
+  content: Debitis rerum quidem dolorem qui ex hic iusto et veniam
+  user_id: 37
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &36 2016-10-25 21:09:17.054187000 Z
+    zone: *2
+    time: *36
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &37 2016-10-25 21:09:17.054187000 Z
+    zone: *2
+    time: *37
+Twit_19:
+  id: 291
+  content: In incidunt cum velit qui nihil sit deserunt commodi eum
+  user_id: 37
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &38 2016-10-25 21:09:17.676879000 Z
+    zone: *2
+    time: *38
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &39 2016-10-25 21:09:17.676879000 Z
+    zone: *2
+    time: *39
+Twit_20:
+  id: 292
+  content: Molestiae iste fuga sapiente facere aliquam excepturi ducimus dolorum accusantium
+  user_id: 37
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &40 2016-10-25 21:09:18.303270000 Z
+    zone: *2
+    time: *40
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &41 2016-10-25 21:09:18.303270000 Z
+    zone: *2
+    time: *41
+Twit_21:
+  id: 293
+  content: Omnis aut qui modi aut eos magnam molestiae quaerat odit
+  user_id: 38
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &42 2016-10-25 21:09:20.280141000 Z
+    zone: *2
+    time: *42
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &43 2016-10-25 21:09:20.280141000 Z
+    zone: *2
+    time: *43
+Twit_22:
+  id: 294
+  content: Omnis quod explicabo dolores beatae iste veritatis aut esse temporibus
+  user_id: 38
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &44 2016-10-25 21:09:20.895035000 Z
+    zone: *2
+    time: *44
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &45 2016-10-25 21:09:20.895035000 Z
+    zone: *2
+    time: *45
+Twit_23:
+  id: 295
+  content: Ut sint repellendus quibusdam odit ut autem autem corporis molestiae
+  user_id: 38
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &46 2016-10-25 21:09:21.496627000 Z
+    zone: *2
+    time: *46
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &47 2016-10-25 21:09:21.496627000 Z
+    zone: *2
+    time: *47
+Twit_24:
+  id: 296
+  content: Facilis cupiditate ad provident dolore amet velit necessitatibus sit quia
+  user_id: 38
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &48 2016-10-25 21:09:22.147150000 Z
+    zone: *2
+    time: *48
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &49 2016-10-25 21:09:22.147150000 Z
+    zone: *2
+    time: *49
+Twit_25:
+  id: 297
+  content: Cupiditate nobis dolor animi aut quas culpa aspernatur aut vel
+  user_id: 38
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &50 2016-10-25 21:09:22.846311000 Z
+    zone: *2
+    time: *50
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &51 2016-10-25 21:09:22.846311000 Z
+    zone: *2
+    time: *51

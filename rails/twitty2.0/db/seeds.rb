@@ -17,8 +17,10 @@ end
 5.times do
     name = Faker::Internet.user_name
     u = User.create(nickname: name,
-                    email: Faker::Internet.email(name),
-                    avatar: "https://robohash.org/#{name}.jpg")
+                    email: Faker::Internet.email(name)
+                    #,
+                    #avatar: "https://robohash.org/#{name}.jpg"
+                    )
     5.times do
         tw = Twit.create(content: Faker::Lorem.sentence(10, false, 0).chop,
                          user_id: u.id)
